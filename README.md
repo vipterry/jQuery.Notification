@@ -2,6 +2,8 @@
 一个基于jQuery的通知插件
 可以直接使用animate.css动画，需要手动将css代码复制过来
 
+https://github.com/vipterry/jQuery.Notification.git
+
 /*
 * @example
  //用法一
