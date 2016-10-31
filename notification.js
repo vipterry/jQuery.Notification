@@ -177,3 +177,17 @@
     //注册到window对象下
     window.Notification = $.Notification;
 })(window, jQuery);
+
+/*===========================
+ Notification AMD Export
+ ===========================*/
+if (typeof(module) !== 'undefined')
+{
+    module.exports = window.Notification;
+}
+else if (typeof define === 'function' && define.amd) {
+    define([], function () {
+        'use strict';
+        return window.Notification;
+    });
+}
