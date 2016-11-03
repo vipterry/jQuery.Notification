@@ -75,9 +75,13 @@
      * @param config [object] 创建通知的参数【参考默认设置】
      * */
     Notification.create = function(config){
+        if (typeof config !== 'object'){
+            config = {
+                text : config
+            };
+        }
         config = $.extend({},Notification.config, config);
         var notification = template(config);
-
         nInstance[notification.id] = $(notification.content).appendTo($body);
 
         nInstance[notification.id].find('.dismiss').one('click',function(){
